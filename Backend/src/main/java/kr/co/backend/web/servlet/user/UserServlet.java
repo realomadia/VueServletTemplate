@@ -10,11 +10,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "userServlet", urlPatterns = {"/api/register"})
-    public class UserServlet extends BaseServlet {
-        ApiResult result = new ApiResult();
-        protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+public class UserServlet extends BaseServlet {
+    ApiResult result = new ApiResult();
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String id = req.getParameter("id");
+        String password =req.getParameter("password");
         System.out.println(id);
+        System.out.println(password);
         result.setCode("200");
         this.write(resp,result);
     }

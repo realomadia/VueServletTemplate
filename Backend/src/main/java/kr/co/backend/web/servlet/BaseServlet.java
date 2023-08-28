@@ -12,8 +12,6 @@ import java.io.IOException;
 
 public abstract class BaseServlet extends HttpServlet {
     /**
-     * 转发请求
-     *
      * @param request
      * @param response
      * @param path
@@ -26,8 +24,6 @@ public abstract class BaseServlet extends HttpServlet {
     }
 
     /**
-     * 重定向
-     *
      * @param request
      * @param response
      * @param url
@@ -45,7 +41,6 @@ public abstract class BaseServlet extends HttpServlet {
     protected void write(HttpServletResponse response, ApiResult result) throws IOException {
         response.setContentType("application/json;charset=utf-8");
         response.setCharacterEncoding("utf-8");
-        //设置跨域请求共享
         response.setHeader("Access-Control-Allow-Origin", "*");
         response.setHeader("Access-Control-Allow-Credentials", "true");
         response.setHeader("Access-Control-Allow-Methods", "*");
