@@ -7,16 +7,7 @@ const store = createStore({
         }
     },
     mutations :{
-        setMore(state) {
-        },
     },
-    actions : {
-        getData(context) {
-           axios.get('https://codingapple1.github.io/vue/more0.json').then((a) => {
-
-           })
-        }
-    }
 
 })
 export default store;
