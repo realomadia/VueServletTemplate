@@ -51,4 +51,9 @@ public abstract class BaseServlet extends HttpServlet {
         response.getWriter().write(jsonStr);
         response.getWriter().flush();
     }
+    @Override
+    public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        super.service(request, response);
+    }
 }

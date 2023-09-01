@@ -10,6 +10,7 @@ public class DbUtil {
     private final String driver;
     private final String user;
     private final String password;
+    private Connection conn = null;
 
 
     public DbUtil() {
@@ -20,7 +21,6 @@ public class DbUtil {
     }
 
     public Connection getConn() throws Exception {
-        Connection conn = null;
         Class.forName(driver);
         conn = DriverManager.getConnection(url, user, password);
         return conn;

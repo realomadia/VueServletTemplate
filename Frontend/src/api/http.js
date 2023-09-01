@@ -6,7 +6,6 @@ const instance = axios.create({
         'content-type': 'application/x-www-form-urlencoded'
     }
 });
-// 요청을 보내기 전에 요청을 수정
 instance.interceptors.request.use(config => {
         console.log(config);
         return config

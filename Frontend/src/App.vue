@@ -12,7 +12,9 @@ export default{
 </script>
 <style>
 #app {
-
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
 }
 
 </style>
